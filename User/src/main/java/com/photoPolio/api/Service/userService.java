@@ -18,4 +18,12 @@ public class userService {
 		//user 전체 조회
 		return repo.findAll();
 	}
+	public String getUserIdAndPw(String id,String password){
+		List<User> value = repo.findByIdAndPassword(id, password);
+		if(!value.isEmpty()) {
+			return "true";
+		}else {
+			return "false";
+		}
+	}
 }
