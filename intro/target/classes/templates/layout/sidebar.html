@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+</head>
+<div th:fragment="sidebar">
+	<div id="sidebarCover" class="commonBgColor">
+		<div id="TitleMenuCover">
+			
+		</div>
+		<div class="subMenu">
+			<div id="subMenu_profile" class="subMenu_class commonColor">
+				<i class="fa fa-user fa-lg"></i> 
+				<p class="iconName commonColor">Profile</p>
+			</div>
+			<div id="subMenu_myPhotoPolio" class="subMenu_class commonColor">
+				<i class="fa fa-list-alt fa-lg" aria-hidden="true"></i>
+				<p class="iconName commonColor">My PortPolio</p>
+			</div>
+			<div id="subMenu_comment" class="subMenu_class commonColor">
+				<i class="fa fa-comment fa-lg" aria-hidden="true"></i>
+				<p class="iconName commonColor">Comment</p>
+			</div>
+			
+			<div id="subMenu_histroy" class="subMenu_class commonColor">
+				<i class="fa fa-history fa-lg" aria-hidden="true"></i>
+				<p class="iconName commonColor">History</p>
+			</div>
+			<div id="searchBtn-search" class="subMenu_class commonColor">
+				<i class="fa fa-search fa-lg" id="searchBtn"></i>
+				<p class="iconName commonColor">Search</p>
+			</div>
+		</div>
+	</div>
+			<th:block layout:fragment="css">
+			<style>
+			#sidebarCover{
+				width: 50%;
+				height : 100%;
+				float: left;
+			}
+			#sidebarBtnCover{
+				width: 20%;
+				height : 100%;
+				float: left;
+				display: table;
+				cursor: pointer;
+			}
+			#sidebarBtn{
+				display: table-cell;
+    			vertical-align: middle;
+			}
+				.iconName{
+				margin-top : 0;
+				display: none;
+				}
+				
+				.subMenu{
+				height : 45%;
+				}
+				#searchBtn-cover{
+				
+				}
+				
+				#searchBtn{
+				}
+				.subMenu_class{
+				height : 20%;
+				text-align: center;
+				cursor: pointer;
+				font-family: 'Kaushan Script', cursive;
+				}
+				
+				#subMenu_profile{
+				}
+				
+				#subMenu_myPhotoPolio{
+				}
+				
+				#subMenu_comment{
+				}
+			</style>
+		</th:block>
+			<th:block layout:fragment="script">
+	 <th:block th:include="layout/headerSetting::script"></th:block>
+		<script type="text/javascript" th:inline="javascript">
+			$(function(){
+				$("#TitleMenu").click(function(){
+					location.href ="index";
+				})
+				
+				$("#subMenu_profile").click(function(){
+					location.href ="profile";
+				})
+				
+				$("#subMenu_myPhotoPolio").click(function(){
+					location.href ="myPortPolio";
+				})
+				
+				$("#subMenu_comment").click(function(){
+					location.href ="comment";
+				})
+				
+				$("#subMenu_histroy").click(function(){
+					location.href ="history";
+				})
+				
+				$('.fa-times').click(function(){
+					$('#search').slideUp("slow");
+				})
+				
+				$("#searchBtn-search").click(function(){
+					$("#search").slideToggle("slow");
+				})
+				
+			});	
+		</script>
+	</th:block>
+		
+</div>
+</html>
