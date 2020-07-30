@@ -6,13 +6,4 @@
     <version>1.0.0</version>
   </parent>
   <artifactId>Setting</artifactId>
-
-  <dependencies>
-  		<dependency>
-    		<groupId>com.photoPolio.api</groupId>
-        	<artifactId>Common</artifactId>
-        	<version>1.0.0</version>
-		</dependency>
-	</dependencies>
-	
 </project>

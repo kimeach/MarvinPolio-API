@@ -101,6 +101,11 @@
   	<module>Setting</module>
   	<module>intro</module>
   	<module>User</module>
-  
+
+  	<module>Login</module>
+  	<module>Settings</module>
+  	<module>Users</module>
+  	<module>Comments</module>
+  	<module>Commons</module>
   </modules>
 </project>

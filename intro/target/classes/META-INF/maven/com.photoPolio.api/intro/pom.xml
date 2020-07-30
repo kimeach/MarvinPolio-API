@@ -49,7 +49,11 @@
 		  <artifactId>User</artifactId>
 		  <version>1.0.0</version>
 	  </dependency>
-
+	  <dependency>
+		  <groupId>com.photoPolio.api</groupId>
+		  <artifactId>Login</artifactId>
+		  <version>1.0.0</version>
+	  </dependency>
 
 <!-- 	  <dependency>
 		  <groupId>com.photoPolio.api</groupId>
